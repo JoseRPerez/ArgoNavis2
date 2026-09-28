@@ -1,2 +1,2 @@
 En build.gradle(module:) cambio...
-minSDKVersion 19 por 23 para que funcione en el xiaomi
+minSDKVersion 23
