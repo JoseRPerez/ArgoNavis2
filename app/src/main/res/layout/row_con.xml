@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <!---Swipe Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/B_edit"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/main"
+            android:src="@drawable/edit_dso"
+            app:tint="@color/blanco" />
+
+        <ImageButton
+            android:id="@+id/B_info"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/gris_oscuro"
+            android:src="@drawable/info"
+            app:tint="@color/blanco" />
+    </LinearLayout>
+
+
+    <!---Main Layout-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_card_single_2"
+        android:foregroundGravity="right"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TV_row"
+            style="@style/text_main_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="15"
+            android:gravity="center_vertical"
+            android:text="Andromeda"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/TV_data"
+            style="@style/texto_cabeceras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="12%"
+            android:textColor="@color/main"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:srcCompat="@drawable/next"
+            app:tint="@color/gris3" />
+
+        <Switch
+            android:id="@+id/sw"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

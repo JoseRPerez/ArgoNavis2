@@ -1,0 +1,62 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+<!--
+        <item
+            android:id="@+id/nav_night_mode"
+            android:title="Modo noche"
+            app:actionLayout="@layout/switch_modo_noche" />
+-->
+
+        <item
+            android:id="@+id/nav_BackUp"
+            android:icon="@drawable/database_export"
+            android:title="Exportr Base de Datos" />
+        <item
+            android:id="@+id/nav_ImportDB"
+            android:icon="@drawable/database_import"
+            android:title="Importar Base de Datos" />
+        <item
+            android:id="@+id/nav_newDSO"
+            android:icon="@drawable/resource_new"
+            android:title="Crear Nuevo Objeto" />
+        <item
+            android:id="@+id/nav_importList"
+            android:icon="@drawable/download"
+            android:title="Importar Lista" />
+
+        <item
+            android:id="@+id/nav_recalculate"
+            android:icon="@drawable/calculate"
+            android:title="Recalcular Todo" />
+
+        <item
+            android:id="@+id/edit_chartssettings"
+            android:icon="@drawable/maps"
+            android:title="Editar Cartas de Navegación" />
+
+        <item
+            android:id="@+id/memory_query"
+            android:icon="@drawable/registros"
+            android:title="Consultar Registros" />
+
+        <item
+            android:id="@+id/set_apikey"
+            android:icon="@drawable/ia_info"
+            android:title="Establecer ApiKey de Gemini" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/info"
+            android:title="@string/acerca_de" />
+
+        <item
+            android:id="@+id/buy_coffee"
+            android:icon="@drawable/coffee_outline"
+            android:title="@string/buy_coffee" />
+
+        <item
+            android:id="@+id/nav_close_app"
+            android:icon="@drawable/exit"
+            android:title="@string/cerrar_argonavis" />
+    </group>
+</menu>

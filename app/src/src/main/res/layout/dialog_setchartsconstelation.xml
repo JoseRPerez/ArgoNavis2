@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/border_textvew2">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Asignar cartas a constelación"
+        android:textColor="@color/granate"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded,UnknownIdInLayout" />
+
+    <Spinner
+        android:id="@+id/SP_constelaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="@color/granate"
+        android:dropDownWidth="match_parent"
+        android:popupBackground="@color/negro" />
+
+    <EditText
+        android:id="@+id/ET_charts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SP_constelaciones"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="15dp"
+        android:text="152"
+        android:backgroundTint="@color/granate"
+        android:textColor="@color/Naranja"
+        android:textSize="18dp"
+        tools:ignore="DuplicateIds,HardcodedText,RtlHardcoded,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/Btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ET_charts"
+        android:layout_alignBaseline="@+id/btn_cancel"
+        android:layout_alignBottom="@+id/btn_cancel"
+        android:layout_marginRight="40dp"
+        android:layout_toStartOf="@+id/btn_cancel"
+        android:background="@drawable/border_textvew"
+        android:text="OK"
+        android:textColor="@color/granate"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ET_charts"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border_textvew"
+        android:text="Cerrar"
+        android:textColor="@color/gris_oscuro"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+</RelativeLayout>

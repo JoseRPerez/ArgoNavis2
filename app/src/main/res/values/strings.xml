@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ArgoNavis</string>
+    <string name="texto_ejemplo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="nuevo_nobjeto">Nuevo\nobjeto</string>
+    <string name="consultarindices">Consultar\nÍndices</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="filtrar_constelaciones">Filtrar Constelaciones</string>
+    <string name="constelaciones">Constelaciones</string>
+    <string name="mostrar_ocultar_constelaciones">Mostrar/Ocultar Constelaciones</string>
+    <string name="Buscar">Buscar</string>
+    <string name="buscar">Buscar...</string>
+    <string name="pendientes">Objetos Pendientes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu">Menu</string>
+    <string name="app_subname">Bitácora de Observación</string>
+    <string name="navigation_drawer_open">Abrir Menú</string>
+    <string name="navigation_drawer_close">Cerrar Menú</string>
+    <string name="TitleFragment4">Pendientes</string>
+    <string name="editar_objeto">Editar Objeto</string>
+    <string name="autor">José Rodríguez Pérez</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="github_link">https://github.com/JoseRPerez</string>
+    <string name="cerrar_argonavis">Cerrar ArgoNavis</string>
+    <string name="frag1">Constelaciones</string>
+    <string name="frag2">Catálogo de DSOs</string>
+    <string name="frag3">Listas Personalizadas</string>
+    <string name="frag4">Objetos Pendientes</string>
+    <string name="frag5">Objetos en Tránsito</string>
+    <string name="buy_coffee">Invítame a Café</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/border_textvew2">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Selecciona una Lista"
+        android:textColor="@color/granate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Spinner
+        android:id="@+id/sp_listSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_alignStart="@+id/tv1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="@color/granate"
+        android:popupBackground="@color/negro" />
+
+
+    <Button
+        android:id="@+id/Btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_listSelect"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="30dp"
+        android:layout_toStartOf="@+id/Btn_add"
+        android:background="@drawable/border_textvew"
+        android:text="CANCELAR"
+        android:textColor="@color/gris_oscuro"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/Btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Btn_cancel"
+        android:layout_alignEnd="@+id/sp_listSelect"
+        android:layout_alignBottom="@+id/Btn_cancel"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border_textvew"
+        android:text="AGREGAR"
+        android:textColor="@color/gris_oscuro"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+</RelativeLayout>

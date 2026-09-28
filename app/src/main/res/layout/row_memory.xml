@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <!---Swipe Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/edt_date"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/main"
+            android:src="@drawable/date"
+            app:tint="@color/blanco"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/edit_memo"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/main"
+            android:src="@drawable/edit_dso"
+            app:tint="@color/blanco"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/BtnRemoveThis"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/granate"
+            android:src="@drawable/delete"
+            app:tint="@color/blanco"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_card_single_2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/text_title_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Fecha"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/memory"
+            style="@style/text_memory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="texto de memoria"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

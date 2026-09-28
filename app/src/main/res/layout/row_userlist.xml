@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+
+    <!---Swipe Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
+        <ImageButton
+            android:id="@+id/B_edit"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/main"
+            android:src="@drawable/edit_dso"
+            app:tint="@color/blanco"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/B_swapSeq"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/main"
+            android:src="@drawable/order"
+            android:tint="@color/blanco"
+            tools:ignore="ContentDescription,UseAppTint" />
+
+
+        <ImageButton
+            android:id="@+id/B_delete"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/granate"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/blanco"
+            tools:ignore="ContentDescription,InefficientWeight" />
+    </LinearLayout>
+
+
+    <!---Main Layout-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_card_single_2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:paddingRight="5dp"
+            android:visibility="visible"
+            tools:ignore="ObsoleteLayoutParam,RtlSymmetry">
+
+            <ImageView
+                android:id="@+id/icon"
+                style="@style/iconos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/arrow_down"
+                app:tint="@color/main" />
+
+            <TextView
+                android:id="@+id/TV_number"
+                style="@style/texto_datos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="25dp"
+                android:text="110"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TV_name"
+            style="@style/text_main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Catálogo Messier"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

@@ -1,0 +1,102 @@
+<resources>
+
+
+    <!-- Aplicacion a FullScreen sin barra de estado superior -->
+    <style name="FullScreenTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Eliminar windowFullscreen para mostrar barra de estado -->
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Para versiones anteriores nuevo -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- <item name="android:windowFullscreen">true</item>  comentado por ahora-->
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/main</item>
+        <item name="actionOverflowButtonStyle">@style/dots_icon</item>
+
+    </style>
+
+
+    <style name="dots_icon" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/menu_dots</item>
+    </style>
+
+    <!-- Background -->
+
+
+
+    <style name="fondo">
+        <item name="android:background">@color/fondo</item>
+    </style>
+
+
+    <style name="fondo_TopBar">
+        <item name="android:background">@color/fondoTopBar</item>
+    </style>
+
+    <style name="fondo_top_line">
+        <item name="android:background">@drawable/border_buttons_layout</item>
+    </style>
+
+    <style name="fondo_transparente">
+        <item name="android:background">#A9000000</item>
+        <item name="android:textColor">@color/main</item>
+    </style>
+
+    <style name="linea1">
+        <item name="android:background">@color/blanco</item>
+    </style>
+
+    <!-- Textos -->
+    <style name="texto_cabeceras">
+        <item name="android:textColor">#B6B6B6</item>
+    </style>
+
+    <style name="texto_cabeceras2">
+        <item name="android:textColor">@color/granate</item>
+    </style>
+
+    <style name="texto_datos">
+        <item name="android:textColor">@color/gris_oscuro</item>
+    </style>
+
+    <style name="textos_normal">
+        <item name="android:textColor">@color/granate</item>
+    </style>
+
+    <style name="textos_TopBar">
+        <item name="android:textColor">@color/letra_Titulo</item>
+    </style>
+
+    <style name="textos_lista">
+        <item name="android:textColor">@color/letra_Lista</item>
+    </style>
+
+
+    <!-- Icons -->
+    <style name="iconos">
+        <item name="android:background">#00000000</item>
+        <item name="tint">@color/main2</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+
+    <style name="iconos_bar">
+        <item name="android:background">#00000000</item>
+        <item name="tint">@color/iconos_TopTab</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="iconos_main_bar">
+        <item name="android:background">@color/fondo_Bar</item>
+        <item name="tint">@color/iconos_Tab</item>
+    </style>
+
+    <style name="iconos_main_bar_red">
+        <item name="android:background">@color/fondo_Bar</item>
+        <item name="tint">@color/negro</item>
+    </style>
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- YA NO HAY SOPORTE PARA ANDROID 9 O INFERIOR -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher2"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/FullScreenTheme">
+
+        <!-- Definir la actividad principal -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Argonavis"
+            android:theme="@style/FullScreenTheme">
+
+            <!-- Intent Filter para la actividad principal -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".EditDSO" />
+        <activity android:name=".FilterDialog_borrar" />
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".WikiActivity" />
+        <activity android:name=".ConsultaIA" />
+        <activity android:name=".MemoriesActivity" />
+        <activity android:name=".ToViewActivity" />
+        <activity android:name=".UserListNotSeqActivity" />
+        <activity android:name=".UserListSeqActivity" />
+        <activity android:name=".intoConstellationActivity" />
+        <activity android:name=".DSOActivity" />
+        <activity android:name=".SettingChartActivity" />
+        <activity android:name=".MemorySettingsActivity"
+            android:windowSoftInputMode="stateUnspecified|adjustResize"/>
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEARCH" />
+            <data android:mimeType="text/astro_object" />
+        </intent>
+
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="text/astro_position" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent>
+    </queries>
+
+</manifest>

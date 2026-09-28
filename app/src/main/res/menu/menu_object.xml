@@ -1,0 +1,60 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/openMap"
+        android:icon="@drawable/maps"
+        android:title="Abrir Mapa"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/openSkeye"
+        android:icon="@drawable/skeye_icon"
+        android:title="Abrir Skeye"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/newMemory"
+        android:icon="@drawable/registros"
+        android:title="Agregar Nueva Memoria"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menu_view_memories"
+        android:icon="@drawable/registros"
+        android:title="Registros"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/showWiki"
+        android:icon="@drawable/wiki_web"
+        android:title="Buscar Información en Wikipedia"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/infoIA"
+        android:icon="@drawable/ia_info"
+        android:title="IA información"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menu_insert_in_list"
+        android:icon="@drawable/insert_in_list"
+        android:title="Agregar a Lista"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menu_edit_dso"
+        android:icon="@drawable/edit_dso"
+        android:title="Editar Objeto"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+
+</menu>

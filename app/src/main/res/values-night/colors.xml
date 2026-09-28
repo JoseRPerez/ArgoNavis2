@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#DA0B0F</color>
+    <!--    <color name="granate">#DA0B0F</color>-->
+    <color name="granate">#BFDA0B0F</color>
+    <color name="granate2">#BFDA0B0F</color>
+    <color name="gris_oscuro">#666666</color>
+    <color name="gris_inactivo">#484848</color>
+    <color name="negro">#000000</color>
+    <color name="negro_sombra">#1e1e1e</color>
+    <color name="Transparencia">#bf000000</color>
+    <color name="Transparente">#00000000</color>
+    <!--    <color name="Naranja">#FF9800</color>-->
+    <color name="Naranja2">#BFFF9800</color>
+    <color name="Naranja">#C57700</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="azul">#1565C0</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="magenta2">#BFFF00FF</color>
+    <color name="item_activado_claro">#DA0B0F</color>
+    <color name="item_desactivado">#666666</color>
+    <color name="texto_caja">#898989</color>
+    <color name="secondary">#FF9800</color>
+    <color name="fondo_caja">#ACACAC</color>
+    <color name="text_spinner">#DA0B0F</color>
+    <color name="selected_color">#002C28</color>
+
+    <!--NUEVOS COLORES VERSION 4-->
+    <color name="fondo">#000000</color>
+    <color name="fondo_lista">#000000</color>
+    <color name="fondo_Bar">#191919</color>
+    <color name="letra_Titulo">#e8e8e8</color>
+    <color name="letra_Lista">#b1b1b1</color>
+    <color name="iconos_Tab">#8f8f8f</color>
+    <color name="iconos_TopTab">#ffffff</color>
+    <color name="titulo_dialogo">#e8e8e8</color>
+    <color name="bg_gral">#09121A</color>
+    <!--    <color name="main">#009688</color>-->
+    <color name="main">#598483</color>
+    <color name="main2">#598483</color>
+    <color name="texto_boton">#CECECE</color>
+    <color name="item_activado">#598483</color>
+    <color name="item_menu">#b1b1b1</color>
+    <color name="colorSelected">#598483</color>
+    <color name="colorUnselected">#b1b1b1</color>
+    <!--    <color name="con_name">#FF9800</color>-->
+    <color name="con_name">#BFFF9800</color>
+    <color name="carViewBackground">#0E0E0E</color>
+    <color name="fondoTopBar">#151515</color>
+
+    <color name="gris1">#2B2B2B</color>
+    <color name="gris2">#4B4B4B</color>
+    <color name="gris3">#707070</color>
+    <color name="gris4">#BDBDBD</color>
+
+    <color name="stars">#707070</color>
+    <!--    <color name="mainTopBar">#151515</color>-->
+    <color name="mainTopBar">#18181a</color>
+
+    <color name="mainTitleTopBar">#ded3b9</color>
+    <color name="drawerBackground">#0E0E0E</color>
+    <color name="drawerText">#BDBDBD</color>
+    <color name="title_section">#707070</color>
+    <color name="green_90_transparent">#366CF472</color>
+
+    <dimen name="text_size_section">20sp</dimen>
+    <dimen name="text_size_card">20sp</dimen>
+    <dimen name="text_size_main_list">22sp</dimen>
+    <dimen name="text_size_memory">20sp</dimen>
+    <dimen name="text_1_second_row">22sp</dimen>
+    <dimen name="text_2_second_row">18sp</dimen>
+
+</resources>
+

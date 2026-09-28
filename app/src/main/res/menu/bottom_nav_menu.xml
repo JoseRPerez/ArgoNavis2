@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="@string/frag1" />
+
+    <item
+        android:id="@+id/navigation_DsoList"
+        android:icon="@drawable/deep_search"
+        android:title="@string/frag2" />
+
+    <item
+        android:id="@+id/navigation_UserLists"
+        android:icon="@drawable/userlists"
+        android:title="@string/frag3" />
+
+    <item
+        android:id="@+id/navigation_toViewList"
+        android:icon="@drawable/eye"
+        android:title="@string/frag4" />
+
+    <item
+        android:id="@+id/navigation_meridian"
+        android:icon="@drawable/meridian"
+        android:title="@string/frag5" />
+
+</menu>

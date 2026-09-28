@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainTopBar"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Botón a la izquierda -->
+            <ImageButton
+                android:id="@+id/ib_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/Transparente"
+                android:contentDescription="@string/menu"
+                android:padding="8dp"
+                android:src="@drawable/arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/mainTitleTopBar"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Título centrado -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:text="@string/editar_objeto"
+                android:textColor="@color/mainTitleTopBar"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ib_Back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- Botón a la derecha -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/fondo"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/negro_sombra"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/AC_CAT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main"
+                    android:hint="Catálogo"
+                    android:minHeight="48dp"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+                <EditText
+                    android:id="@+id/et_referencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main"
+                    android:ems="10"
+                    android:hint="Referencia"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="DuplicateIds,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_textvew"
+                android:text="Descargar Coordenadas"
+                android:textColor="@color/main"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/negro_sombra"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Constelación"
+                    android:textColor="@color/texto_caja"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <Spinner
+                    android:id="@+id/sp_constelaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/item_activado"
+                    android:popupBackground="@color/negro"
+                    tools:ignore="InefficientWeight,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/negro_sombra"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Clasificación"
+                    android:textColor="@color/texto_caja"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <Spinner
+                    android:id="@+id/sp_clasificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/item_activado"
+                    android:popupBackground="@color/negro"
+                    tools:ignore="InefficientWeight,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/negro_sombra"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/main"
+                    android:ems="10"
+                    android:hint="Otras Designaciones"
+                    android:inputType="text|textCapSentences"
+                    android:minHeight="48dp"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="DuplicateIds,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/main"
+                    android:ems="10"
+                    android:hint="Nombre"
+                    android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences"
+                    android:minHeight="48dp"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="DuplicateIds,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+                <EditText
+                    android:id="@+id/et_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/main"
+                    android:ems="10"
+                    android:hint="Tamaño aparente"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="DuplicateIds,HardcodedText,ObsoleteLayoutParam,RtlHardcoded,TextFields" />
+
+                <EditText
+                    android:id="@+id/et_mag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/main"
+                    android:ems="10"
+                    android:hint="Magnitud"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="DuplicateIds,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/negro_sombra"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:text="AR (0-24): "
+                    android:textColor="@color/texto_caja"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds,HardcodedText" />
+
+                <EditText
+                    android:id="@+id/et_AR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/main"
+                    android:ems="10"
+                    android:hint="Ascensión Recta"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:singleLine="false"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="Deprecated,DuplicateIds,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/negro_sombra"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:text="DEC:"
+                    android:textColor="@color/texto_caja"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds,HardcodedText" />
+
+                <EditText
+                    android:id="@+id/et_DEC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/main"
+                    android:ems="10"
+                    android:hint="Declinación"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    android:textColor="@color/item_activado"
+                    android:textColorHint="@color/gris3"
+                    android:textSize="18sp"
+                    tools:ignore="DuplicateIds,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_remove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/granate"
+                android:elevation="1dp"
+                android:onClick="DeleteItem"
+                android:text="Eliminar elemento"
+                android:textColor="@color/gris4"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/border_textvew2">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Agregar Nueva Lista"
+        android:textColor="@color/granate"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/ET_ListName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv1"
+        android:layout_below="@+id/tv1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="@color/granate"
+        android:ems="10"
+        android:hint="Etiqueta de la Nueva Lista"
+        android:inputType="text"
+        android:textColor="@color/gris_oscuro"
+        tools:ignore="HardcodedText,LabelFor"
+        android:autofillHints="" tools:targetApi="lollipop" />
+
+    <CheckBox
+        android:id="@+id/CB_setSequential"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ET_ListName"
+        android:layout_alignStart="@id/ET_ListName"
+        android:layout_marginTop="15dp"
+        android:gravity="clip_vertical|center_vertical"
+        android:text="Es una lista secuencia"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/Btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CB_setSequential"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="30dp"
+        android:layout_toStartOf="@+id/Btn_add"
+        android:background="@drawable/border_textvew"
+        android:text="OK"
+        android:textColor="@color/granate"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/Btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Btn_cancel"
+        android:layout_alignBottom="@+id/Btn_cancel"
+        android:layout_alignEnd="@+id/ET_ListName"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/border_textvew"
+        android:text="Cancelar"
+        android:textColor="@color/gris_oscuro"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+</RelativeLayout>

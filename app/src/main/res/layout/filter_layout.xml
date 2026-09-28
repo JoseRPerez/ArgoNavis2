@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RL2"
+    style="lista"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fondo_lista"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/LL0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            style="@style/iconos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:onClick="back"
+            app:srcCompat="?android:attr/homeAsUpIndicator"
+            app:tint="@color/gris4"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Filtrar"
+            android:textColor="@color/gris4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,InefficientWeight" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/IB_delete"
+            style="@style/iconos_rojo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:onClick="ToFilter"
+            app:srcCompat="@drawable/delete"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/IB_Accept"
+            style="@style/iconos_dorados"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:onClick="ToFilter"
+            app:srcCompat="@drawable/ok"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/carViewBackground"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/texto_datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Tipo"
+            android:textColor="@color/main"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Spinner
+            android:id="@+id/SP_Tipo"
+            style="@style/textos_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/main"
+            android:minHeight="48dp"
+            android:popupBackground="@color/fondo"
+            tools:ignore="DuplicateIds" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/carViewBackground"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/texto_datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Clasificación"
+            android:textColor="@color/main"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds,HardcodedText" />
+
+        <Spinner
+            android:id="@+id/SP_Clasif"
+            style="@style/textos_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/main"
+            android:minHeight="48dp"
+            android:popupBackground="@color/fondo"
+            tools:ignore="DuplicateIds" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/carViewBackground"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/texto_datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Puntuación Mínima"
+            android:textColor="@color/main"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds,HardcodedText" />
+
+        <RatingBar
+            android:id="@+id/RB"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentBottom="false"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.75"
+            android:hapticFeedbackEnabled="false"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/gris2"
+            android:progressTint="@color/main"
+            android:rating="2"
+            android:stepSize="1"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+    </LinearLayout>
+
+</RelativeLayout>

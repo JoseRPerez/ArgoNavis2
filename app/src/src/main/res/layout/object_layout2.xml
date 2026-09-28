@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/negro"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/LL_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/IB_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Btn_image_old"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/negro"
+                android:onClick="Back"
+                app:srcCompat="@drawable/icono_back"
+                tools:ignore="ContentDescription,DuplicateIds,ObsoleteLayoutParam"
+                app:tint="@color/granate" />
+
+            <TextView
+                android:id="@+id/TV_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LL1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="false"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="NGC 6543"
+                android:textColor="@color/granate"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,InefficientWeight,ObsoleteLayoutParam,RtlHardcoded,UnknownIdInLayout" />
+
+            <ImageButton
+                android:id="@+id/IB_Map"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/negro"
+                android:clickable="true"
+                android:cropToPadding="false"
+                android:onClick="openMap"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:srcCompat="@android:drawable/ic_menu_mylocation"
+                app:tint="@color/Naranja" />
+
+            <ImageButton
+                android:id="@+id/IB_MoveToList"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:background="#00FFFFFF"
+                android:clickable="true"
+                android:onClick="Object2List"
+                android:src="@drawable/ic_main_menu"
+                app:tint="@color/granate" />
+
+            <ImageButton
+                android:id="@+id/Btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Btn_image_old"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@android:color/black"
+                android:clickable="true"
+                android:onClick="EditThis"
+                app:tint="@color/granate"
+                app:srcCompat="@drawable/ic_editar"
+                tools:ignore="ContentDescription,DuplicateIds,ObsoleteLayoutParam" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/SV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/LL_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/IV_foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="0.74"
+                    android:clickable="true"
+                    android:onClick="ShowImage"
+                    android:scaleType="center"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/imagen"
+                    tools:ignore="ContentDescription,InefficientWeight" />
+
+                <Button
+                    android:id="@+id/BTN_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="-45dp"
+                    android:background="@color/Transparencia"
+                    android:gravity="bottom"
+                    android:paddingLeft="20dp"
+                    android:text="Nebulosa del ojo de gato"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/granate"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/TV_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TV_id"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="Nebulosa del ojo de gato"
+                    android:textColor="@color/granate"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/TV_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/TV_id"
+                    android:layout_alignBottom="@+id/TV_id"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="M 4515 65"
+                    android:textColor="@color/gris_oscuro"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText,NotSibling,ObsoleteLayoutParam,RtlHardcoded" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="visible" />
+
+                    <RatingBar
+                        android:id="@+id/RateBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="false"
+                        android:layout_alignParentBottom="false"
+                        android:layout_marginRight="10dp"
+                        android:hapticFeedbackEnabled="false"
+                        android:numStars="5"
+                        android:progressTint="@color/granate"
+                        android:rating="2"
+                        android:secondaryProgressTint="@color/granate"
+                        android:stepSize="1"
+                        android:translationY="5dp"
+                        tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <Switch
+                        android:id="@+id/S_Visto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0"
+                        android:checked="false"
+                        android:onClick="Add2Viewed"
+                        android:text="Añadir a visto"
+                        android:textAllCaps="false"
+                        android:textColor="@color/granate"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:trackTint="@android:color/white"
+                        tools:ignore="HardcodedText" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Switch
+                        android:id="@+id/S_Pendiente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0"
+                        android:onClick="Add2View"
+                        android:text="Pendiente"
+                        android:textAllCaps="false"
+                        android:textColor="@color/granate"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:trackTint="@android:color/white"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/negro_sombra"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Tipo"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/TV_Tipo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Cúmulo"
+                            android:textColor="@color/granate"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/TV_Clasif"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Abierto"
+                            android:textColor="@color/granate"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/negro_sombra"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Constelación"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/TV_Constelacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Andtromeda"
+                        android:textColor="@color/granate"
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/negro_sombra"
+                    android:onClick="editCarta"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="editCarta"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Atlas"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/TV_carta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="20dp"
+                                android:background="#00FFFFFF"
+                                android:text="3,72"
+                                android:textColor="@android:color/holo_orange_dark"
+                                android:textSize="18sp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/IB_editCarta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:background="#00FFFFFF"
+                            android:onClick="editCarta"
+                            android:src="@android:drawable/ic_lock_idle_lock"
+                            android:tint="@color/gris_oscuro" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/negro_sombra"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="0.5"
+                            android:text="Tamaño aparente"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/TV_Size"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text='22"'
+                            android:textColor="@color/granate"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="0.5"
+                            android:text="Magnitud"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/TV_Magnitud"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="12"
+                            android:textColor="@color/granate"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="10"
+                        android:text="Información"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:id="@+id/IB_editInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:onClick="editInfo"
+                        android:src="@android:drawable/ic_lock_idle_lock"
+                        app:tint="@color/gris_oscuro" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/TV_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/border_textvew2"
+                    android:padding="10dp"
+                    android:text="asdfasf\nasdfasfsa\kdjfd"
+                    android:textColor="@color/gris_oscuro"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView16d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="10"
+                        android:text="Memoaria de Observación"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:id="@+id/IB_editMemo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF"
+                        android:onClick="editMemo"
+                        android:src="@android:drawable/ic_lock_idle_lock"
+                        app:tint="@color/gris_oscuro" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/TV_memoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/border_textvew2"
+                    android:padding="10dp"
+                    android:text="asdfasf\nsdsd"
+                    android:textColor="@color/gris_oscuro"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

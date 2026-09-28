@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
+
+    <TextView
+        android:id="@+id/TV_lista_CAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="CAT+ref"
+        android:textColor="@color/granate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/TV_lista_REF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/TV_lista_CAT"
+        android:textColor="@color/granate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/TV_lista_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TV_lista_CAT"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:text="NAME"
+        android:textColor="@color/gris_oscuro"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/TV_Tipo_Class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/TV_lista_CAT"
+        android:layout_alignBottom="@id/TV_lista_CAT"
+        android:layout_alignParentEnd="true"
+        android:text="(Clasif)"
+        android:textColor="@color/gris_oscuro"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/TV_ToView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TV_YaVisto"
+        android:layout_alignBottom="@+id/TV_YaVisto"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@+id/TV_YaVisto"
+        android:text="●"
+        android:textColor="@color/granate"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/TV_YaVisto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/TV_lista_Name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="●"
+        android:textColor="@android:color/holo_blue_dark"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/TV_YaVisto"
+        android:layout_marginTop="10dp"
+        android:background="@color/granate"
+        android:orientation="horizontal"></LinearLayout>
+</RelativeLayout>

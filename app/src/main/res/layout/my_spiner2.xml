@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/text_title_memory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="true"
+    android:background="@color/negro_sombra"
+    android:gravity="left"
+    android:padding="5dip"
+    android:text="prueba"
+    tools:ignore="RtlHardcoded" />

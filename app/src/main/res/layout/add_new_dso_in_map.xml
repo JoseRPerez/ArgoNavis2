@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fondo_lista"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/main"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/main"
+            android:ems="10"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:text="Name"
+            android:textColor="@color/gris3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSecond"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spConstelacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/main"
+            android:minHeight="48dp" />
+
+        <Spinner
+            android:id="@+id/spClasificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/main"
+            android:minHeight="48dp" />
+
+        <RatingBar
+            android:id="@+id/RateBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:alpha="0.75"
+            android:hapticFeedbackEnabled="false"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/gris1"
+            android:progressTint="@color/main"
+            android:rating="1"
+            android:scaleX=".7"
+            android:scaleY=".7"
+            android:stepSize="1"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btActions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/border_textvew"
+        android:gravity="center"
+        android:text="Crear Objeto"
+        android:textColor="@color/main"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btNewMemory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/border_textvew"
+        android:gravity="center"
+        android:text="Agregar Memoria"
+        android:textColor="@color/gris3"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</LinearLayout>

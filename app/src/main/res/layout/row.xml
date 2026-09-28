@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+
+    <!---Swipe Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/IBtoview2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/granate"
+            android:src="@drawable/eye"
+            app:tint="@color/blanco" />
+
+
+        <ImageButton
+            android:id="@+id/IBwiki2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/main"
+            android:src="@drawable/wiki_web"
+            app:tint="@color/blanco" />
+
+    </LinearLayout>
+
+
+    <!---Main Layout-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/iv_dso"
+            style="@style/iconos"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:cropToPadding="false"
+            android:src="@drawable/galaxy" />
+
+        <TextView
+            android:id="@+id/TV_n"
+            style="@style/text_main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="M 1 (Nebulosa del Cangrejo de mar salado)"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>
